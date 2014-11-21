@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 24, 2014 9:51:59 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.rikki.domain.bloginfo" table="bloginfo">
+    
+        <id name="username" type="java.lang.String">
+            <column name="username" />
+            <generator class="assigned" />
+        </id>
+        <property name="idiograph" type="java.lang.String">
+            <column name="idiograph" />
+        </property>
+        <property name="blogtitle" type="java.lang.String">
+            <column name="blogtitle" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC 
+  		"-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+  		
+ <validators>
+     <validator type="requiredstring">
+		  <param name="fieldName">blogtitle</param>
+		  <param name="trim">true</param>
+		  <message>You must enter your blog title</message>
+	 </validator>
+	    
+	<validator type="regex">
+		<param name="fieldName">blogtitle</param>
+		<param name="expression"><![CDATA[(\w{1,50})]]></param>
+		<message>The length of blog title should be between 1 to 50</message>
+	</validator>
+	
+	<!--idiograph  -->
+	
+	<validator type="requiredstring">
+		  <param name="fieldName">idiograph</param>
+		  <param name="trim">true</param>
+		  <message>Your signature can't be empty!</message>
+	 </validator>
+	    
+	<validator type="regex">
+		<param name="fieldName">idiograph</param>
+		<param name="expression"><![CDATA[(\w{1,100})]]></param>
+		<message>The length of signature should be between 1 to 100</message>
+	</validator>
+ 
+ </validators>
+  		
+
+	

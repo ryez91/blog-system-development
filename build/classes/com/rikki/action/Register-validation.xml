@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC 
+  		"-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+    <validator type="requiredstring">
+		<param name="fieldName">email</param>
+		<message>Please provide a valid e-mail address!</message>
+	</validator>
+	
+	<validator type="requiredstring">
+		  <param name="fieldName">password</param>
+		  <param name="trim">true</param>
+		  <message>Password can't be empty!</message>
+	    </validator>
+	    
+	<validator type="regex">
+		<param name="fieldName">password</param>
+		<param name="expression"><![CDATA[(\w{6,20})]]></param>
+		<message>The length should be between 6 to 20</message>
+	</validator>
+	
+	<validator type="requiredstring">
+		<param name="fieldName">repassword</param>
+		<param name="trim">true</param>
+		<message>Please confirm your password!</message>
+	</validator>
+
+	<validator type="regex">
+		<param name="fieldName">repassword</param>
+		<param name="expression"><![CDATA[(\w{6,20})]]></param>
+		<message>The length should be between 6 to 20</message>
+	</validator>
+	
+	<validator type="fieldexpression">
+		<param name="fieldName">repassword</param>
+		<param name="expression"><![CDATA[(repassword==password)]]></param>
+		<message>Please make sure you entered the same password!</message>
+	</validator>
+	
+	<validator type="requiredstring">
+		<param name="fieldName">username</param>
+		<param name="trim">true</param>
+		<message>Please enter your username!</message>
+	</validator>
+
+	<validator type="regex">
+		<param name="fieldName">username</param>
+		<param name="expression"><![CDATA[(\w{6,20})]]></param>
+		<message>The length should be between 6 to 20</message>
+	</validator>
+	
+		<validator type="requiredstring">
+		<param name="fieldName">answer</param>
+		<param name="trim">true</param>
+		<message>This field can't be empty!</message>
+	</validator>
+
+	<validator type="regex">
+		<param name="fieldName">answer</param>
+		<param name="expression"><![CDATA[(\w{2,50})]]></param>
+		<message>The length should be between 2 to 50</message>
+	</validator>
+	
+</validators>

@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//WebContent/user/addArticle.jsp=UTF-8
+encoding//WebContent/user/showArticleDetails.jsp=UTF-8
+encoding//src/com/rikki/util/CKEditorUploadServlet.java=UTF-8
+encoding//src/com/rikki/util/CKEditorUploadServlet2.java=UTF-8

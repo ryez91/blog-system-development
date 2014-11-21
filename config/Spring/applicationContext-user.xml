@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userDao" class="com.rikki.dao.impl.userDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    
+    <bean id="userService" class="com.rikki.service.impl.UserServiceImpl">
+        <property name="userDao">
+			<ref bean="userDao"/>
+		</property>
+    </bean>
+    
+    <bean id="registerAction" class="com.rikki.action.Register" scope="prototype">
+        <property name="userService">
+			<ref bean="userService"/>
+		</property>
+    </bean>
+    
+    <bean id="loginAction" class="com.rikki.action.Login">
+        <property name="userService">
+            <ref bean="userService"></ref>
+        </property>
+        <property name="bloginfoService">
+            <ref bean="BlogInfoService"></ref>
+        </property>
+    </bean>
+
+</beans>

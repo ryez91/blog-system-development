@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="articleDAO" class="com.rikki.dao.impl.articleDAOImpl">
+      <property name="sessionFactory">
+          <ref bean="sessionFactory"></ref>
+      </property>
+  </bean>
+  
+    <bean id="articleService" class="com.rikki.service.impl.articleServiceImpl">
+      <property name="articleDao">
+          <ref bean="articleDAO"></ref>
+      </property>
+     <property name="commentDao">
+          <ref bean="commentDAO"></ref>
+      </property>
+  </bean>
+  
+  <bean id="addArticleAction" class="com.rikki.action.AddArticle">
+      <property name="atcService">
+          <ref bean="articleService"></ref>
+      </property>
+  </bean>
+  
+  <bean id="showAllArticleAction" class="com.rikki.action.ShowAllArticleByUser">
+      <property name="atcService">
+          <ref bean="articleService"></ref>
+      </property>
+  </bean>
+  
+    <bean id="showAllArticleHomeAction" class="com.rikki.action.ShowAllArticle">
+      <property name="atcService">
+          <ref bean="articleService"></ref>
+      </property>
+  </bean>
+  
+      <bean id="showArticleDetailsAction" class="com.rikki.action.ShowArticleDetails">
+      <property name="atcService">
+          <ref bean="articleService"></ref>
+      </property>
+      <property name="cmService">
+          <ref bean="commentService"></ref>
+      </property>
+      <property name="blogInfoService">
+          <ref bean="BlogInfoService"></ref>
+      </property>
+
+</bean>
+  
+
+</beans>

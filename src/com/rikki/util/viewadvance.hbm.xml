@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 24, 2014 9:51:59 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.rikki.util.ViewAdvanced" table="viewadvance">
+        <id name="id">
+            <generator class="increment" />
+        </id>
+        <property name="aId">
+            <column name="aId" />
+        </property>
+        <property name="date">
+            <column name="date" />
+        </property>
+        <property name="ip">
+            <column name="ip" />
+        </property>
+    </class>
+</hibernate-mapping>

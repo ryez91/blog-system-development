@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 24, 2014 9:51:59 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.rikki.domain.user" table="user">
+        <id name="username" type="java.lang.String">
+            <column name="username" />
+            <generator class="assigned" />
+        </id>
+        <property name="email" type="java.lang.String">
+            <column name="email" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="mpassword" />
+        </property>
+        <property name="question" type="java.lang.String">
+            <column name="question" />
+        </property>
+        <property name="answer" type="java.lang.String">
+            <column name="answer" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.6.0.201407080615-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>config/Spring/applicationContext-user.xml</config>
+		<config>config/Spring/applicationContext.xml</config>
+		<config>config/Spring/applicationContext-editInfo.xml</config>
+		<config>config/Spring/applicationContext-article.xml</config>
+		<config>config/Spring/applicationContext-comment.xml</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

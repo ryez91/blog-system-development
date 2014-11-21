@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 24, 2014 9:51:59 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.rikki.domain.article" table="article">
+        <id name="id">
+            <generator class="increment" />
+        </id>
+        <property name="title" type="java.lang.String">
+            <column name="title" />
+        </property>
+        <property name="content" type="java.lang.String">
+            <column name="content" />
+        </property>
+        <property name="username" type="java.lang.String">
+            <column name="username" />
+        </property>
+        <property name="date">
+            <column name="date" />
+        </property>
+        <property name="hasRead">
+            <column name="hasRead" />
+        </property>
+    </class>
+</hibernate-mapping>
